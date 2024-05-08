@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    overflow-x: hidden;
+    list-style: none;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/Poppins-Regular.otf') format(opentype);
+}
+
+main {
+    background-color: #f3f3f3;
+    height: 46vw;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.drop-down {
+    border: 1px solid #5553E3;
+    width: 150px;
+    margin-top: 5px;
+    border-radius: 5px;
+    display: none;
+}
+
+button {
+    border: none;
+    position: relative;
+    width: 150px;
+    height: 35px;
+    color: #f3f3f3;
+    cursor: pointer;
+    background-color: #5553E3;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: poppins;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    background-color: #5553e3e8;
+    border-radius: 4px;
+}
+
+.drop-down>ul li {
+    padding: 10px 20px;
+    transition: .2s ease;
+    cursor: pointer;
+    font-family: poppins;
+    color: #f3f3f3;
+    font-size: 13px;
+}
+
+.drop-down>ul li:hover {
+    background-color: #5553E3;
+}
+
+.container.active .drop-down {
+    display: block;
+}
+
+.container.active button::before {
+    top: 17px;
+    transform: rotate(-225deg);
+}
